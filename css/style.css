@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --azul: #1D2C4E;
+  --laranja: #FF7A00;
+  --branco: #ffffff;
+  --cinza: #f5f5f5;
+  --texto: #333333;
+}
+
+/* BASE */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--texto);
+  background-color: var(--branco);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--azul);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.header-left, .header-center, .header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-center { justify-content: center; }
+.header-right { justify-content: flex-end; }
+.header-left {
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.location-label {
+  color: #fff;
+  font-size: 11px;
+  opacity: 0.8;
+}
+.location-value {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.logo-img {
+  max-height: 100px;
+  width: auto;
+}
+
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--laranja);
+  color: var(--branco);
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-secondary {
+  border: 2px solid var(--branco);
+  color: var(--branco);
+}
+.btn-secondary:hover {
+  background-color: var(--branco);
+  color: var(--azul);
+}
+
+/* HERO */
+.hero {
+  background-image: url(../imagens/botijões.png);
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 72px);
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  color: var(--branco);
+  padding: 20px;
+  max-width: 600px;
+  margin-left: 10%;
+}
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.hero-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* BENEFÍCIOS */
+.benefits {
+  padding: 60px 0;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+.icon {
+  font-size: 58px;
+  color: var(--laranja);
+  margin-bottom: 12px;
+  transition: transform 0.3s, color 0.3s, filter 0.3s;
+}
+
+.benefit:hover .icon {
+  transform: scale(1.15) translateY(-3px);
+  color: var(--azul);
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25));
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--cinza);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.footer nav a {
+  color: var(--azul);
+  margin: 0 5px;
+  text-decoration: none;
+}
+.footer nav a:hover { text-decoration: underline; }

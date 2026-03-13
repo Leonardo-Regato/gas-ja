@@ -66,7 +66,3 @@ Database (planned)
 This project is being developed as part of my learning journey in web development and software engineering, with the goal of building a real solution for local gas delivery services.
 
 ---
-
-## Author
-
-Leonardo Regato

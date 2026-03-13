@@ -26,7 +26,7 @@ const estados = {
   "São Paulo": "SP",
   "Sergipe": "SE",
   "Tocantins": "TO"
-};
+}
 
 const locationText = document.getElementById("locationValue");
 
@@ -42,21 +42,22 @@ if (navigator.geolocation) {
         .then(data => {
 
             const bairro =
-                data.address.suburb ||
-                data.address.neighbourhood ||
-                data.address.city_district;
+                data.address?.suburb ||
+                data.address?.neighbourhood ||
+                data.address?.city_district;
             
             const estadoNome = data.address.state
             const estadoSigla = estados[estadoNome];
 
             locationText.textContent = `${bairro || "Sua região"} · ${estadoSigla || ""}`;
 
-        });
+        })
+        .catch(() => {
+            locationText.textContent = "Localização indisponível"
+                })
 
-    });
+    })
 
 } else {
-
-    locationText.textContent = "Localização não suportada";
-
+    locationText.textContent = "Localização não suportada"
 }

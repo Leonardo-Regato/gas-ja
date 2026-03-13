@@ -21,6 +21,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: var(--texto);
   background-color: var(--branco);
+  line-height: 1.5;
 }
 
 .container {
@@ -79,7 +80,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -99,9 +100,10 @@ body {
 
 /* HERO */
 .hero {
-  background-image: url(../imagens/botijões.png);
+  background-image: url(../imagens/botijoes.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   min-height: calc(100vh - 72px);
   position: relative;
 }
@@ -171,3 +173,17 @@ body {
   text-decoration: none;
 }
 .footer nav a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo-img {
+   max-height: 75px;
+  }
+  .header-right .btn {
+   padding: 8px 14px;
+   font-size: 14px;
+  }
+
+} 

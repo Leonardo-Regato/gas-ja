@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --azul: #1D2C4E;
+  --laranja: #FF7A00;
+  --branco: #ffffff;
+  --cinza: #f5f5f5;
+  --texto: #333333;
+}
+
+/* BASE */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--texto);
+  background-color: var(--branco);
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--azul);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.header-left, .header-center, .header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-center { justify-content: center; }
+.header-right { justify-content: flex-end; }
+.header-left {
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.location-label {
+  color: #fff;
+  font-size: 11px;
+  opacity: 0.8;
+}
+.location-value {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.logo-img {
+  max-height: 100px;
+  width: auto;
+}
+
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--laranja);
+  color: var(--branco);
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-secondary {
+  border: 2px solid var(--branco);
+  color: var(--branco);
+}
+.btn-secondary:hover {
+  background-color: var(--branco);
+  color: var(--azul);
+}
+
+/* HERO */
+.hero {
+  background-image: url(../imagens/botijoes.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 72px);
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  color: var(--branco);
+  padding: 20px;
+  max-width: 600px;
+  margin-left: 10%;
+}
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.hero-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* BENEFÍCIOS */
+.benefits {
+  padding: 60px 0;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+.icon {
+  font-size: 58px;
+  color: var(--laranja);
+  margin-bottom: 12px;
+  transition: transform 0.3s, color 0.3s, filter 0.3s;
+}
+
+.benefit:hover .icon {
+  transform: scale(1.15) translateY(-3px);
+  color: var(--azul);
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25));
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--cinza);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.footer nav a {
+  color: var(--azul);
+  margin: 0 5px;
+  text-decoration: none;
+}
+.footer nav a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+
+  .hero {
+    background-image: url(../imagens/botijoes-para-celular.jpg);
+  }
+ 
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo-img {
+   max-height: 75px;
+  }
+  .header-right .btn {
+   padding: 8px 14px;
+   font-size: 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  
+
+
+} 
+
+/* ===============================
+   AUTH (CADASTRO / LOGIN)
+================================= */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top left, #1e2a47, #0f172a);
+  padding: 40px 20px;
+}
+
+/* LOGO */
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.auth-logo img {
+  height: 120px; /* antes era 180px (exagerado) */
+}
+
+/* CARD */
+.auth-card {
+  background-color: var(--branco);
+  max-width: 420px; /* antes 680px (muito largo) */
+  width: 100%;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  animation: fadeUp 0.4s ease;
+}
+
+.auth-card h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 6px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   FORM
+================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+.input-field {
+  width: 100%;
+  height: 48px;
+  padding: 0 40px 0 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  background-color: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.input-field:focus {
+  border-color: var(--laranja);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255,122,0,0.15);
+  outline: none;
+}
+
+
+.form-group small {
+  display: none;
+}
+
+
+ .form-group.error input {
+  border: 2px solid #ff0000 ;
+}
+
+.form-group.error .loading {
+  display: none;
+}
+
+ .form-group.success input {
+  border: 2px solid #4af108 ;
+}
+
+.form-group.success select {
+  border: 2px solid #4af108;
+}
+
+.form-group.error .error {
+   color: #ff0000;
+   margin: 3px 0 0 10px;
+   font-size: 12px;
+   display: block;
+}
+
+.form-group.error select {
+  border: 2px solid #ff0000;
+}
+
+.loading {
+  display: none;
+  color: #999;
+  font-size: 12px;
+}
+
+.form-group.loading .loading{
+  display: block;
+}
+
+.form-group.error #password-hint{
+  display: none;
+}
+
+/* ===============================
+   SENHA
+================================= */
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #64748b;
+  transition: 0.2s ease;
+}
+
+.toggle-password:hover {
+  color: var(--azul);
+}
+
+.toggle-password span {
+  transition: transform 0.2s ease, opacity 0.15s ease;
+}
+
+.toggle-password.active span {
+  opacity: 0.6;
+}
+
+
+
+.toggle-password:hover span { 
+ transform: scale(1.1);
+}
+
+#password-hint {
+  font-size: 11px;
+  margin: 3px 0 0 10px;
+  color: #94a3b8;
+  display: block;
+}
+
+ .material-symbols-outlined.check {
+  position: absolute;
+  right: -25px;
+  top: 38px;
+  color: #4af108;
+  font-size: 24px;
+  opacity: 0;
+  }
+
+.form-group.success .material-symbols-outlined.check {
+  opacity: 1;
+}
+
+
+
+
+/* ===============================
+   BOTÃO
+================================= */
+
+.auth-card .btn-primary {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--laranja);
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.auth-card .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255,122,0,0.25);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+.auth-footer {
+  margin-top: 22px;
+  font-size: 13px;
+  text-align: center;
+  color: #64748b;
+}
+
+.auth-footer a {
+  color: var(--laranja);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   ANIMAÇÃO SUAVE
+================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*================================
+    CADASTRO ENDEREÇO
+  ============================= */
+
+  .left .overlay-text h1 {
+    color: var(--laranja);
+    font-size: 35px; 
+  }
+
+  .address-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.address-page .left {
+  flex: 1;
+  background: linear-gradient(rgba(29, 44, 78, 0.85), rgba(21, 32, 57, 0.85));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:40px;
+  color: var(--branco);
+  
+}
+
+.address-card header {
+  margin-bottom: 30px;
+}
+
+.address-page .right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  padding: 40px;
+}
+
+.address-card {
+  background-color: var(--branco);
+  width: 100%;
+  max-width: 700px;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+  animation: fadeUp 0.4s ease;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url('seta.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+select.input-field {
+  cursor: pointer;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+
+}
+
+.cep-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+}
+
+.numero-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+}
+
+.cidade-bairro-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 18px;
+}
+
+.btn-save {
+  width: 100%;
+  height: 52px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255,122,0,0.3);
+}
+
+.btn-save:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 15px rgba(255,122,0,0.2);
+}
+
+.btn-save:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+
+  .address-page{
+    flex-direction: column;
+  }
+
+  .address-page .left {
+    min-height: 180px;
+  }
+
+  .address-page .right {
+    flex: none;
+    width: 100%;  
+    padding: 20px;
+  }
+
+  .address-card {
+    padding: 30px 20px;
+    border-radius: 12px;  
+  }
+
+  .form-row,
+  .cep-row,
+  .cidade-bairro-row{
+    grid-template-columns: 1fr;
+  }
+
+  .btn-save {
+    height: 50px;
+  }
+
+  .cep-row{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 140px 1fr;
+  }
+
+  .numero-row {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 140px 1fr;
+  }
+
+  .cidade-bairro-row {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 140px 1fr;
+  }
+}

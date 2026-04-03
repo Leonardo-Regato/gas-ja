@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | fornecedor</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="shortcut icon" href="imagens/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+<body>
+
+ <main class="auth-container">
+      <div class="auth-logo">
+        <img src="imagens/logo total laranja.svg" alt="Logo da empresa Gás Já">
+      </div>
+
+    <section class="auth-card">
+
+      <h1>Criar conta</h1>
+      <p class="auth-subtitle">Venda seu gás de forma rápida e segura.</p>
+
+      <form id="form" action="cadastro-endereço-fornecedor.html" method="post">
+        <div class="form-group">
+          <label for="deposit-name">Nome da empresa</label>
+          <input type="text" id="deposit-name" name="deposit-name" class="input-field" placeholder="Digite o nome" >
+          <span class="material-symbols-outlined check">
+            check_small
+          </span>
+          
+          <small class="error">error mensage</small>
+        </div>
+
+         <div class="form-group">
+          <label for="cnpj">CNPJ</label>
+          <input type="text" id="cnpj" name="cnpj" class="input-field" placeholder="00.000.000/001-00">
+          <span class="material-symbols-outlined check">
+            check_small
+          </span>
+          
+          <small class="error">error mensage</small>
+        </div>
+
+        <div class="form-group" >
+          <label for="user-email">E-mail</label>
+          <input type="email" id="user-email" name="email" class="input-field" placeholder="seuemail@email.com">
+          <span class="material-symbols-outlined check">
+            check_small
+          </span>
+          
+          <small class="error">error mensage</small>
+        </div>
+
+
+        <div class="form-group">
+          <label for="user-phone">Telefone</label>
+          <input type="tel" id="user-phone" name="phone" class="input-field" placeholder="(00) 00000-0000">
+          <span class="material-symbols-outlined check">
+            check_small
+          </span>
+          
+          <small class="error">error mensage</small>
+        </div>
+
+        <div class="form-group">
+          <label for="user-password">Senha</label>
+          <div class="password-wrapper">
+            <input type="password" id="user-password" name="password" class="input-field" placeholder="Crie uma senha">
+            <button type="button" class="toggle-password" aria-label="Mostrar ou ocultar senha"><span class="material-symbols-outlined">
+                visibility_off
+                </span>
+            </button>
+          </div>
+          <span class="material-symbols-outlined check">
+            check_small
+          </span>
+          
+          <small class="error">error mensage</small>
+          <small id="password-hint">Mínimo 8 caracteres, 1 letra maiúscula e 1 número</small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirmar senha</label>
+          <div class="password-wrapper">
+          <input type="password" id="confirm-password" name="confirmPassword" class="input-field" placeholder="Confirme a senha">
+          <button type="button" class="toggle-password" aria-label="Mostrar ou ocultar senha"><span class="material-symbols-outlined">
+                visibility_off
+                </span>
+            </button>
+        </div>     
+        <span class="material-symbols-outlined check">
+            check_small
+        </span>
+          
+          <small class="error">error mensage</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Criar conta</button>
+      </form>
+
+      <p class="auth-footer">
+        Já tem uma conta? <a href="/login">Entrar</a>
+      </p>
+    </section>
+
+  </main>
+
+ <script src="js/cadastro-fornecedor.js"></script> 
+</body>
+</html>

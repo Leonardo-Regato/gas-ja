@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadatro endereço</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="shortcut icon" href="imagens/icon.svg" type="image/x-icon">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+
+    <main class="address-page">
+            
+    <!--LADO ESQUERDO-->
+        <section class="left">
+            <div class="overlay-text">
+                <h1>Estamos quase lá!</h1>
+                <p>Cadastre o endereço do seu depósito para que clientes próximos possam encontrá-lo e fazer pedidos com facilidade.
+                </p>
+            </div>
+        </section>
+
+        <!--LAdO DIREITO-->
+        <section class="right">
+            <div class="address-card">
+                <header>
+                    <h2>Cadastrar endereço</h2>
+                </header>
+
+                <form id="form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nomeEndereco">Nome do endereço</label>
+                        <input class="input-field" name="nomeEndereco" id="nomeEndereco" type="text" placeholder="Ex: Depósito 1, Depósito2...">
+                        <span class="material-symbols-outlined check">
+                            check_small
+                        </span>
+          
+                         <small class="error">error mensage</small>
+                    </div>
+                    <div class="form-row cep-row">
+                        
+                        <div class="form-group">
+                            <label for="cep">CEP</label>
+                            <input name="cep" class="input-field" id="cep" type="text" placeholder="00000-000">
+                           
+                            <small class="error">error mensage</small>
+                            <small class="loading">Buscando CEP... </small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select name="estado" class="input-field" id="estado">
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                             <span class="material-symbols-outlined check">
+                                check_small
+                            </span>
+                            
+                            <small class="error">error mensage</small>
+
+                        </div>
+                    </div>
+                        <div class="form-group">
+                        <label for="rua">Endereço</label>
+                        <input name="rua" class="input-field" id="endereco" type="text">
+                        <span class="material-symbols-outlined check">
+                            check_small
+                        </span>
+                            
+                        <small class="error">error mensage</small>
+                    </div>
+                <div class="form-row numero-row">
+                    <div class="form-group">
+                        <label for="numero">Número</label>
+                        <input name="numero" class="input-field" id="numero" type="text">
+                            
+                        <small class="error">error mensage</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complemento">Complemento (opicional)</label>
+                        <input id="complemento" name="complemento" class="input-field" type="text" placeholder=""><span class="material-symbols-outlined check">
+                            check_small
+                        </span>
+                            
+                        <small class="error">error mensage</small>
+                    </div>
+                </div>
+                
+                <div class="form-row cidade-bairro-row">
+                    <div class="form-group">
+                        <label for="bairro">Bairro</label>
+                        <input class="input-field" id="bairro" type="text">
+                            
+                        <small class="error">error mensage</small>
+                    </div>
+                        
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input name="cidade" class="input-field" id="cidade" type="text" autocomplete="address-level2">
+                            <span class="material-symbols-outlined check">
+                            check_small
+                            </span>
+                            
+                            <small class="error">error mensage</small>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-save">
+                        Salvar endereço
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/endereco-fornecedor.js"></script>
+</body>
+</html>
+
+
+
+        
+
+
+
+
+
+    

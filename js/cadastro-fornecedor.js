@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
     if (!confirmValidation()) temErro = true
 
     if(!temErro) {
-        form.submit()
+        window.location.href = "cadastro-endereco-fornecedor.html"
     }    
 })
 

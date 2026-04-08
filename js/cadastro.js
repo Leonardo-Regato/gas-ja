@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     console.log("temErro", temErro)
 
     if(!temErro) {
-        form.submit()
+        window.location.href = "cadastro-endereco.html"
     }
 })
 
